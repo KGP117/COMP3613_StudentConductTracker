@@ -12,7 +12,7 @@ def get_all_users_json():
     users = User.query.all()
     if not users:
         return []
-    users = [user.toDict() for user in users]
+    users = [user.to_json() for user in users]
     return users
 
 # Gets all users in the database
